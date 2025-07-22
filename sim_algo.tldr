@@ -1,0 +1,1925 @@
+{
+	"tldrawFileFormatVersion": 1,
+	"schema": {
+		"schemaVersion": 2,
+		"sequences": {
+			"com.tldraw.store": 4,
+			"com.tldraw.asset": 1,
+			"com.tldraw.camera": 1,
+			"com.tldraw.document": 2,
+			"com.tldraw.instance": 25,
+			"com.tldraw.instance_page_state": 5,
+			"com.tldraw.page": 1,
+			"com.tldraw.instance_presence": 6,
+			"com.tldraw.pointer": 1,
+			"com.tldraw.shape": 4,
+			"com.tldraw.asset.bookmark": 2,
+			"com.tldraw.asset.image": 5,
+			"com.tldraw.asset.video": 5,
+			"com.tldraw.shape.group": 0,
+			"com.tldraw.shape.text": 3,
+			"com.tldraw.shape.bookmark": 2,
+			"com.tldraw.shape.draw": 2,
+			"com.tldraw.shape.geo": 10,
+			"com.tldraw.shape.note": 9,
+			"com.tldraw.shape.line": 5,
+			"com.tldraw.shape.frame": 1,
+			"com.tldraw.shape.arrow": 5,
+			"com.tldraw.shape.highlight": 1,
+			"com.tldraw.shape.embed": 4,
+			"com.tldraw.shape.image": 5,
+			"com.tldraw.shape.video": 3,
+			"com.tldraw.binding.arrow": 0
+		}
+	},
+	"records": [
+		{
+			"id": "pointer:pointer",
+			"typeName": "pointer",
+			"x": 423.1176325894473,
+			"y": 2800.9821821362,
+			"lastActivityTimestamp": 1745424186919,
+			"meta": {}
+		},
+		{
+			"x": 74.00007629394531,
+			"y": 208.20008087158203,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:Kx7K8a45vi9XRes-VRVk5",
+			"type": "geo",
+			"props": {
+				"w": 705.6000366210938,
+				"h": 299.6999969482422,
+				"geo": "rectangle",
+				"color": "black",
+				"labelColor": "black",
+				"fill": "none",
+				"dash": "draw",
+				"size": "m",
+				"font": "draw",
+				"align": "start",
+				"verticalAlign": "middle",
+				"growY": 0,
+				"url": "",
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "{"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "    "
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "highlight"
+										}
+									],
+									"text": "date:"
+								},
+								{
+									"type": "text",
+									"text": " Date of position entry"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "    "
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "highlight"
+										}
+									],
+									"text": "strike:"
+								},
+								{
+									"type": "text",
+									"text": " Strike price (e.g., 18000, 18500)"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": " "
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "highlight"
+										}
+									],
+									"text": "   pe_ce:"
+								},
+								{
+									"type": "text",
+									"text": " Option type (CE/PE)"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "    "
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "highlight"
+										}
+									],
+									"text": "lots: "
+								},
+								{
+									"type": "text",
+									"text": "Number of lots (positive for buy, negative for sell)"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "    "
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "highlight"
+										}
+									],
+									"text": "entry_price:"
+								},
+								{
+									"type": "text",
+									"text": " Price at which position was entered"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "    "
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "highlight"
+										}
+									],
+									"text": "is_active:"
+								},
+								{
+									"type": "text",
+									"text": " Boolean indicating if position is still open"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "}"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a1",
+			"typeName": "shape"
+		},
+		{
+			"x": 173.90634155273438,
+			"y": 1001.6000747680664,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:zvClTU9dIB-nyedWXYvYH",
+			"type": "text",
+			"props": {
+				"color": "green",
+				"size": "s",
+				"w": 236.1875,
+				"font": "draw",
+				"textAlign": "middle",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "bold"
+										}
+									],
+									"text": "CalculateDailyPnL(date, ltpMap):"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a6888",
+			"typeName": "shape"
+		},
+		{
+			"x": 184.80010986328125,
+			"y": 865.2000885009766,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:2tBLmZavsxJfP1wAvNsz4",
+			"type": "geo",
+			"props": {
+				"w": 561.7999572753906,
+				"h": 104.9000015258789,
+				"geo": "rectangle",
+				"color": "grey",
+				"labelColor": "black",
+				"fill": "solid",
+				"dash": "draw",
+				"size": "s",
+				"font": "draw",
+				"align": "start",
+				"verticalAlign": "middle",
+				"growY": 0,
+				"url": "",
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "1. Create new Position object with provided parameters"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "2. Add position to openPositions queue"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a50Zq",
+			"typeName": "shape"
+		},
+		{
+			"x": 191.2000732421875,
+			"y": 1041.4000930786133,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:HB7Ol_1ymm6lYkrqYzqx9",
+			"type": "geo",
+			"props": {
+				"w": 777.8500366210938,
+				"h": 299.3000183105469,
+				"geo": "rectangle",
+				"color": "grey",
+				"labelColor": "black",
+				"fill": "solid",
+				"dash": "draw",
+				"size": "s",
+				"font": "draw",
+				"align": "start",
+				"verticalAlign": "middle",
+				"growY": 0,
+				"url": "",
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "1. daily_pnl = 0"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "2. For each position in openPositions:"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "   a. current_ltp = ltpMap[position.strike]["
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "link",
+											"attrs": {
+												"href": "http://position.pe",
+												"target": "_blank",
+												"rel": "noopener noreferrer nofollow",
+												"class": null
+											}
+										}
+									],
+									"text": "position.pe"
+								},
+								{
+									"type": "text",
+									"text": "_ce][position.expiry_date]"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "   b. If position.lots > 0 (buy):"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "      position_pnl = (current_ltp - position.entry_price)*"
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "italic"
+										}
+									],
+									"text": "position.lots*"
+								},
+								{
+									"type": "text",
+									"text": "LOT_SIZE"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "   c. Else (sell):"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "      position_pnl = (position.entry_price - current_ltp)*"
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "italic"
+										}
+									],
+									"text": "|position.lots| *"
+								},
+								{
+									"type": "text",
+									"text": " LOT_SIZE"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "   d. daily_pnl += position_pnl"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "3. Store daily_pnl in dailyPnL map"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "4. Return daily_pnl"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a70GX",
+			"typeName": "shape"
+		},
+		{
+			"x": -25.62849770083453,
+			"y": -2684.816368023453,
+			"z": 0.7919713790384796,
+			"meta": {},
+			"id": "camera:page:page",
+			"typeName": "camera"
+		},
+		{
+			"x": 189.52334210484491,
+			"y": 3089.881572800934,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:-lKKcayP7ZV7FPyY88bS3",
+			"type": "geo",
+			"props": {
+				"w": 654.5691977149619,
+				"h": 121.21646314917871,
+				"geo": "rectangle",
+				"color": "black",
+				"labelColor": "black",
+				"fill": "none",
+				"dash": "draw",
+				"size": "m",
+				"font": "draw",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"growY": 0,
+				"url": "",
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "2 / 3/3 "
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "aBeCV",
+			"typeName": "shape"
+		},
+		{
+			"x": 174.3063507080078,
+			"y": 1375.4001541137695,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:yH4O-ptHbicMBXT_8-xYl",
+			"type": "text",
+			"props": {
+				"color": "green",
+				"size": "s",
+				"w": 434.1875,
+				"font": "draw",
+				"textAlign": "middle",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "bold"
+										}
+									],
+									"text": "ClosePositions(date, strike, pe_ce, lots_to_close, current_ltp):"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a8ADI",
+			"typeName": "shape"
+		},
+		{
+			"editingShapeId": null,
+			"croppingShapeId": null,
+			"selectedShapeIds": [
+				"shape:wE2gUpKUx-gWuxxLGItKc"
+			],
+			"hoveredShapeId": "shape:wE2gUpKUx-gWuxxLGItKc",
+			"erasingShapeIds": [],
+			"hintingShapeIds": [],
+			"focusedGroupId": null,
+			"meta": {},
+			"id": "instance_page_state:page:page",
+			"pageId": "page:page",
+			"typeName": "instance_page_state"
+		},
+		{
+			"x": 191.64490364564915,
+			"y": 2784.782200640106,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:wE2gUpKUx-gWuxxLGItKc",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 389.91308426658935,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": false,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "stock+strike+Type+Exp"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "aC35o",
+			"typeName": "shape"
+		},
+		{
+			"x": 221.73246116674284,
+			"y": 3238.3717565354946,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:20BScFt5BGgbSPhWB2jK8",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 603.0125122070312,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "avg = updated_avg"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "total_lots = 3"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "booked:"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "combine_PnL "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "avg_Entry_price - {ltp/close} "
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "italic"
+										}
+									],
+									"text": " * #lots *"
+								},
+								{
+									"type": "text",
+									"text": " Lot_size"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "aF7L4",
+			"typeName": "shape"
+		},
+		{
+			"x": 262.2532026541927,
+			"y": 2977.7562470903813,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:pMG440rZAwQYezedh55Il",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 175.75,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "avg = 20"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "total_lots = 6"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "aE9Ev",
+			"typeName": "shape"
+		},
+		{
+			"x": 131.90623474121094,
+			"y": 622.0001525878906,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:y7-FAP2C25nDhyHjbZPOE",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "s",
+				"w": 743.7875366210938,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.8628253730004629,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "1. Initialize empty collections for positions and PnL tracking\r"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "2. For each trading day in chronological order:\r"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "   a. Process new positions\r"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "   b. Calculate unrealized PnL for open positions\r"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "   c. Process any position closures\r"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"content": [
+								{
+									"type": "text",
+									"text": "   d. Update running totals\r"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a35nl",
+			"typeName": "shape"
+		},
+		{
+			"x": 174.04376220703125,
+			"y": 831.0001068115234,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:fgxcc7sEeWgdB0-aDbXuj",
+			"type": "text",
+			"props": {
+				"color": "green",
+				"size": "s",
+				"w": 402.3125,
+				"font": "draw",
+				"textAlign": "middle",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "bold"
+										}
+									],
+									"text": "AddPosition(date, stock, strike, pe_ce, lots, entry_price):"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a42Rx",
+			"typeName": "shape"
+		},
+		{
+			"x": 94.20000076293945,
+			"y": 542.2000274658203,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:UjP8vPZtc0Qf7QlFz_IAr",
+			"type": "geo",
+			"props": {
+				"w": 585.6000480651855,
+				"h": 244.80001831054685,
+				"geo": "rectangle",
+				"color": "light-red",
+				"labelColor": "black",
+				"fill": "solid",
+				"dash": "draw",
+				"size": "s",
+				"font": "draw",
+				"align": "start",
+				"verticalAlign": "middle",
+				"growY": 30.199981689453153,
+				"url": "",
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Algo"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "  "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a24bN",
+			"typeName": "shape"
+		},
+		{
+			"x": 196.20007705688477,
+			"y": 1419.000099182129,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:UHbCN4MyjxKPSZiuT0eSE",
+			"type": "geo",
+			"props": {
+				"w": 810.0000000000001,
+				"h": 609.6000366210938,
+				"geo": "rectangle",
+				"color": "grey",
+				"labelColor": "black",
+				"fill": "solid",
+				"dash": "draw",
+				"size": "s",
+				"font": "draw",
+				"align": "start",
+				"verticalAlign": "middle",
+				"growY": 0,
+				"url": "",
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "1. total_booked_pnl = 0"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "2. remaining_lots = |lots_to_close|"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "3. temp_queue = empty queue"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "4. While remaining_lots > 0 and openPositions not empty:"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "   a. position = openPositions.dequeue()"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "   b. If position matches strike and pe_ce and has opposite sign of lots_to_close:"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "      i. If |position.lots| <= remaining_lots:"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "         - Calculate PnL for fully closing this position"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "         - total_booked_pnl += pnl"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "         - remaining_lots -= |position.lots|"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "      ii. Else:"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "         - Calculate PnL for partially closing this position"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "         - Reduce position.lots accordingly"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "         - Add modified position back to temp_queue"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "         - total_booked_pnl += pnl"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "         - remaining_lots = 0"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "   c. Else:"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "      Add position to temp_queue"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "5. Restore positions from temp_queue to openPositions"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "6. Update bookedPnL for this date"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "7. Update totalBookedPnL"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "8. Return total_booked_pnl"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a95AX",
+			"typeName": "shape"
+		},
+		{
+			"x": 206.6000747680664,
+			"y": 2095.175884099317,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:JSdC0CfK6jJwRRydVDZaP",
+			"type": "geo",
+			"props": {
+				"w": 474,
+				"h": 533,
+				"geo": "rectangle",
+				"color": "grey",
+				"labelColor": "black",
+				"fill": "pattern",
+				"dash": "draw",
+				"size": "s",
+				"font": "draw",
+				"align": "start",
+				"verticalAlign": "middle",
+				"growY": 0,
+				"url": "",
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "heading",
+							"attrs": {
+								"dir": "auto",
+								"level": 2
+							},
+							"content": [
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "bold"
+										}
+									],
+									"text": "Implementation Steps"
+								}
+							]
+						},
+						{
+							"type": "orderedList",
+							"attrs": {
+								"start": 1
+							},
+							"content": [
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "Initialize the system"
+												},
+												{
+													"type": "text",
+													"text": " with empty collections"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "Parse the planning table"
+												},
+												{
+													"type": "text",
+													"text": " to get all planned positions"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "Process each trading day"
+												},
+												{
+													"type": "text",
+													"text": ":"
+												}
+											]
+										},
+										{
+											"type": "bulletList",
+											"content": [
+												{
+													"type": "listItem",
+													"content": [
+														{
+															"type": "paragraph",
+															"attrs": {
+																"dir": "auto"
+															},
+															"content": [
+																{
+																	"type": "text",
+																	"text": "Add new positions from planning table"
+																}
+															]
+														}
+													]
+												},
+												{
+													"type": "listItem",
+													"content": [
+														{
+															"type": "paragraph",
+															"attrs": {
+																"dir": "auto"
+															},
+															"content": [
+																{
+																	"type": "text",
+																	"text": "Update LTP values from external source (NSE site)"
+																}
+															]
+														}
+													]
+												},
+												{
+													"type": "listItem",
+													"content": [
+														{
+															"type": "paragraph",
+															"attrs": {
+																"dir": "auto"
+															},
+															"content": [
+																{
+																	"type": "text",
+																	"text": "Calculate unrealized PnL for all open positions"
+																}
+															]
+														}
+													]
+												},
+												{
+													"type": "listItem",
+													"content": [
+														{
+															"type": "paragraph",
+															"attrs": {
+																"dir": "auto"
+															},
+															"content": [
+																{
+																	"type": "text",
+																	"text": "If positions need to be closed, process them using FIFO"
+																}
+															]
+														}
+													]
+												},
+												{
+													"type": "listItem",
+													"content": [
+														{
+															"type": "paragraph",
+															"attrs": {
+																"dir": "auto"
+															},
+															"content": [
+																{
+																	"type": "text",
+																	"text": "Update daily and total PnL values"
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "Generate reports"
+												},
+												{
+													"type": "text",
+													"text": " showing:"
+												}
+											]
+										},
+										{
+											"type": "bulletList",
+											"content": [
+												{
+													"type": "listItem",
+													"content": [
+														{
+															"type": "paragraph",
+															"attrs": {
+																"dir": "auto"
+															},
+															"content": [
+																{
+																	"type": "text",
+																	"text": "Open positions with unrealized PnL"
+																}
+															]
+														}
+													]
+												},
+												{
+													"type": "listItem",
+													"content": [
+														{
+															"type": "paragraph",
+															"attrs": {
+																"dir": "auto"
+															},
+															"content": [
+																{
+																	"type": "text",
+																	"text": "Closed positions with realized PnL"
+																}
+															]
+														}
+													]
+												},
+												{
+													"type": "listItem",
+													"content": [
+														{
+															"type": "paragraph",
+															"attrs": {
+																"dir": "auto"
+															},
+															"content": [
+																{
+																	"type": "text",
+																	"text": "Daily PnL summary"
+																}
+															]
+														}
+													]
+												},
+												{
+													"type": "listItem",
+													"content": [
+														{
+															"type": "paragraph",
+															"attrs": {
+																"dir": "auto"
+															},
+															"content": [
+																{
+																	"type": "text",
+																	"text": "Total PnL and booked PnL"
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "aAAhg",
+			"typeName": "shape"
+		},
+		{
+			"x": 305.18949403458674,
+			"y": 3048.4282112547744,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:I08aEXiDAKyUB1y119zZc",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 211.6237783610539,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": false,
+				"scale": 1.1870632073740883,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Sell = 3"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "aDBgP",
+			"typeName": "shape"
+		},
+		{
+			"x": 190.12964342745,
+			"y": 2828.2559412552723,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:e2je9TWpl3ooIndLu82HZ",
+			"type": "geo",
+			"props": {
+				"w": 655.0742587652362,
+				"h": 150.8000030517578,
+				"geo": "rectangle",
+				"color": "black",
+				"labelColor": "black",
+				"fill": "none",
+				"dash": "draw",
+				"size": "m",
+				"font": "draw",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"growY": 0,
+				"url": "",
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "1 / 2/2/2 / 3/3 "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "1{"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "st, entry, type, ltp ..."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "}"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "aBB56",
+			"typeName": "shape"
+		},
+		{
+			"meta": {},
+			"id": "page:page",
+			"name": "Page 1",
+			"index": "a1",
+			"typeName": "page"
+		},
+		{
+			"gridSize": 10,
+			"name": "",
+			"meta": {},
+			"id": "document:document",
+			"typeName": "document"
+		},
+		{
+			"followingUserId": null,
+			"opacityForNextShape": 1,
+			"stylesForNextShape": {
+				"tldraw:geo": "rectangle"
+			},
+			"brush": null,
+			"scribbles": [],
+			"cursor": {
+				"type": "default",
+				"rotation": 0
+			},
+			"isFocusMode": false,
+			"exportBackground": true,
+			"isDebugMode": false,
+			"isToolLocked": false,
+			"screenBounds": {
+				"x": 0,
+				"y": 0,
+				"w": 830.4000244140625,
+				"h": 749.6000366210938
+			},
+			"insets": [
+				false,
+				false,
+				true,
+				false
+			],
+			"zoomBrush": null,
+			"isGridMode": false,
+			"isPenMode": false,
+			"chatMessage": "",
+			"isChatting": false,
+			"highlightedUserIds": [],
+			"isFocused": true,
+			"devicePixelRatio": 1.25,
+			"isCoarsePointer": false,
+			"isHoveringCanvas": true,
+			"openMenus": [],
+			"isChangingStyle": false,
+			"isReadonly": false,
+			"meta": {},
+			"duplicateProps": null,
+			"id": "instance:instance",
+			"currentPageId": "page:page",
+			"typeName": "instance"
+		}
+	]
+}

@@ -1,0 +1,847 @@
+{
+    "status": "success",
+    "data": [
+        {
+            "date": "03-Mar-2025",
+            "unrealised": [
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23500,
+                        "2025-03-27",
+                        "LONG"
+                    ],
+                    "lots": 1,
+                    "daily_action": "NEW_LONG",
+                    "debug_info": {
+                        "entry_price": 17.05,
+                        "closing_price": 17.05,
+                        "market_lot": 75,
+                        "pnl_calculation": "(17.05 - 17.05) * 1 * 75"
+                    },
+                    "pnl": 0.0
+                },
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23400,
+                        "2025-03-27",
+                        "SHORT"
+                    ],
+                    "lots": 2,
+                    "daily_action": "NEW_SHORT",
+                    "debug_info": {
+                        "entry_price": 20.35,
+                        "closing_price": 20.35,
+                        "market_lot": 75,
+                        "pnl_calculation": "(20.35 - 20.35) * 2 * 75"
+                    },
+                    "pnl": 0.0
+                }
+            ],
+            "realised": [],
+            "total_unrealised_pnl": 0.0,
+            "total_realized_pnl": 0,
+            "cumulative_total_realized_pnl": 0.0
+        },
+        {
+            "date": "04-Mar-2025",
+            "unrealised": [
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23500,
+                        "2025-03-27",
+                        "LONG"
+                    ],
+                    "lots": 1,
+                    "daily_action": null,
+                    "debug_info": {
+                        "entry_price": 17.05,
+                        "closing_price": 14.25,
+                        "market_lot": 75,
+                        "pnl_calculation": "(14.25 - 17.05) * 1 * 75"
+                    },
+                    "pnl": -210.0
+                },
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23400,
+                        "2025-03-27",
+                        "SHORT"
+                    ],
+                    "lots": 2,
+                    "daily_action": null,
+                    "debug_info": {
+                        "entry_price": 20.35,
+                        "closing_price": 16.45,
+                        "market_lot": 75,
+                        "pnl_calculation": "(20.35 - 16.45) * 2 * 75"
+                    },
+                    "pnl": 585.0
+                }
+            ],
+            "realised": [],
+            "total_unrealised_pnl": 375.0,
+            "total_realized_pnl": 0,
+            "cumulative_total_realized_pnl": 0.0
+        },
+        {
+            "date": "05-Mar-2025",
+            "unrealised": [
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23500,
+                        "2025-03-27",
+                        "LONG"
+                    ],
+                    "lots": 1,
+                    "daily_action": null,
+                    "debug_info": {
+                        "entry_price": 17.05,
+                        "closing_price": 21.3,
+                        "market_lot": 75,
+                        "pnl_calculation": "(21.3 - 17.05) * 1 * 75"
+                    },
+                    "pnl": 318.75
+                },
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23400,
+                        "2025-03-27",
+                        "SHORT"
+                    ],
+                    "lots": 2,
+                    "daily_action": null,
+                    "debug_info": {
+                        "entry_price": 20.35,
+                        "closing_price": 26.35,
+                        "market_lot": 75,
+                        "pnl_calculation": "(20.35 - 26.35) * 2 * 75"
+                    },
+                    "pnl": -900.0
+                }
+            ],
+            "realised": [],
+            "total_unrealised_pnl": -581.25,
+            "total_realized_pnl": 0,
+            "cumulative_total_realized_pnl": 0.0
+        },
+        {
+            "date": "06-Mar-2025",
+            "unrealised": [
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23500,
+                        "2025-03-27",
+                        "LONG"
+                    ],
+                    "lots": 1,
+                    "daily_action": null,
+                    "debug_info": {
+                        "entry_price": 17.05,
+                        "closing_price": 27.7,
+                        "market_lot": 75,
+                        "pnl_calculation": "(27.7 - 17.05) * 1 * 75"
+                    },
+                    "pnl": 798.75
+                },
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23400,
+                        "2025-03-27",
+                        "SHORT"
+                    ],
+                    "lots": 2,
+                    "daily_action": null,
+                    "debug_info": {
+                        "entry_price": 20.35,
+                        "closing_price": 35.9,
+                        "market_lot": 75,
+                        "pnl_calculation": "(20.35 - 35.9) * 2 * 75"
+                    },
+                    "pnl": -2332.5
+                }
+            ],
+            "realised": [],
+            "total_unrealised_pnl": -1533.75,
+            "total_realized_pnl": 0,
+            "cumulative_total_realized_pnl": 0.0
+        },
+        {
+            "date": "07-Mar-2025",
+            "unrealised": [
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23500,
+                        "2025-03-27",
+                        "LONG"
+                    ],
+                    "lots": 1,
+                    "daily_action": null,
+                    "debug_info": {
+                        "entry_price": 17.05,
+                        "closing_price": 26.7,
+                        "market_lot": 75,
+                        "pnl_calculation": "(26.7 - 17.05) * 1 * 75"
+                    },
+                    "pnl": 723.75
+                },
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23400,
+                        "2025-03-27",
+                        "SHORT"
+                    ],
+                    "lots": 2,
+                    "daily_action": null,
+                    "debug_info": {
+                        "entry_price": 20.35,
+                        "closing_price": 35.35,
+                        "market_lot": 75,
+                        "pnl_calculation": "(20.35 - 35.35) * 2 * 75"
+                    },
+                    "pnl": -2250.0
+                }
+            ],
+            "realised": [],
+            "total_unrealised_pnl": -1526.25,
+            "total_realized_pnl": 0,
+            "cumulative_total_realized_pnl": 0.0
+        },
+        {
+            "date": "10-Mar-2025",
+            "unrealised": [
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23500,
+                        "2025-03-27",
+                        "LONG"
+                    ],
+                    "lots": 4,
+                    "daily_action": "ADDED_TO_LONG",
+                    "debug_info": {
+                        "entry_price": 15.66,
+                        "closing_price": 15.2,
+                        "market_lot": 75,
+                        "pnl_calculation": "(15.2 - 15.66) * 4 * 75"
+                    },
+                    "pnl": -138.75
+                },
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23400,
+                        "2025-03-27",
+                        "SHORT"
+                    ],
+                    "lots": 2,
+                    "daily_action": "NO_CHANGE",
+                    "debug_info": {
+                        "entry_price": 20.35,
+                        "closing_price": 19.6,
+                        "market_lot": 75,
+                        "pnl_calculation": "(20.35 - 19.6) * 2 * 75"
+                    },
+                    "pnl": 112.5
+                }
+            ],
+            "realised": [],
+            "total_unrealised_pnl": -26.25,
+            "total_realized_pnl": 0,
+            "cumulative_total_realized_pnl": 0.0
+        },
+        {
+            "date": "11-Mar-2025",
+            "unrealised": [
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23500,
+                        "2025-03-27",
+                        "LONG"
+                    ],
+                    "lots": 4,
+                    "daily_action": null,
+                    "debug_info": {
+                        "entry_price": 15.66,
+                        "closing_price": 14.8,
+                        "market_lot": 75,
+                        "pnl_calculation": "(14.8 - 15.66) * 4 * 75"
+                    },
+                    "pnl": -258.75
+                },
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23400,
+                        "2025-03-27",
+                        "SHORT"
+                    ],
+                    "lots": 2,
+                    "daily_action": null,
+                    "debug_info": {
+                        "entry_price": 20.35,
+                        "closing_price": 19.7,
+                        "market_lot": 75,
+                        "pnl_calculation": "(20.35 - 19.7) * 2 * 75"
+                    },
+                    "pnl": 97.5
+                }
+            ],
+            "realised": [],
+            "total_unrealised_pnl": -161.25,
+            "total_realized_pnl": 0,
+            "cumulative_total_realized_pnl": 0.0
+        },
+        {
+            "date": "12-Mar-2025",
+            "unrealised": [
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23500,
+                        "2025-03-27",
+                        "LONG"
+                    ],
+                    "lots": 4,
+                    "daily_action": null,
+                    "debug_info": {
+                        "entry_price": 15.66,
+                        "closing_price": 10.05,
+                        "market_lot": 75,
+                        "pnl_calculation": "(10.05 - 15.66) * 4 * 75"
+                    },
+                    "pnl": -1683.75
+                },
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23400,
+                        "2025-03-27",
+                        "SHORT"
+                    ],
+                    "lots": 2,
+                    "daily_action": null,
+                    "debug_info": {
+                        "entry_price": 20.35,
+                        "closing_price": 13.1,
+                        "market_lot": 75,
+                        "pnl_calculation": "(20.35 - 13.1) * 2 * 75"
+                    },
+                    "pnl": 1087.5
+                }
+            ],
+            "realised": [],
+            "total_unrealised_pnl": -596.25,
+            "total_realized_pnl": 0,
+            "cumulative_total_realized_pnl": 0.0
+        },
+        {
+            "date": "13-Mar-2025",
+            "unrealised": [
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23500,
+                        "2025-03-27",
+                        "LONG"
+                    ],
+                    "lots": 4,
+                    "daily_action": null,
+                    "debug_info": {
+                        "entry_price": 15.66,
+                        "closing_price": 5.9,
+                        "market_lot": 75,
+                        "pnl_calculation": "(5.9 - 15.66) * 4 * 75"
+                    },
+                    "pnl": -2928.75
+                },
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23400,
+                        "2025-03-27",
+                        "SHORT"
+                    ],
+                    "lots": 2,
+                    "daily_action": null,
+                    "debug_info": {
+                        "entry_price": 20.35,
+                        "closing_price": 6.95,
+                        "market_lot": 75,
+                        "pnl_calculation": "(20.35 - 6.95) * 2 * 75"
+                    },
+                    "pnl": 2010.0
+                }
+            ],
+            "realised": [],
+            "total_unrealised_pnl": -918.75,
+            "total_realized_pnl": 0,
+            "cumulative_total_realized_pnl": 0.0
+        },
+        {
+            "date": "17-Mar-2025",
+            "unrealised": [
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23500,
+                        "2025-03-27",
+                        "LONG"
+                    ],
+                    "lots": 4,
+                    "daily_action": null,
+                    "debug_info": {
+                        "entry_price": 15.66,
+                        "closing_price": 4.55,
+                        "market_lot": 75,
+                        "pnl_calculation": "(4.55 - 15.66) * 4 * 75"
+                    },
+                    "pnl": -3333.75
+                },
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23400,
+                        "2025-03-27",
+                        "SHORT"
+                    ],
+                    "lots": 2,
+                    "daily_action": null,
+                    "debug_info": {
+                        "entry_price": 20.35,
+                        "closing_price": 6.05,
+                        "market_lot": 75,
+                        "pnl_calculation": "(20.35 - 6.05) * 2 * 75"
+                    },
+                    "pnl": 2145.0
+                }
+            ],
+            "realised": [],
+            "total_unrealised_pnl": -1188.75,
+            "total_realized_pnl": 0,
+            "cumulative_total_realized_pnl": 0.0
+        },
+        {
+            "date": "18-Mar-2025",
+            "unrealised": [
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23500,
+                        "2025-03-27",
+                        "LONG"
+                    ],
+                    "lots": 4,
+                    "daily_action": null,
+                    "debug_info": {
+                        "entry_price": 15.66,
+                        "closing_price": 12.5,
+                        "market_lot": 75,
+                        "pnl_calculation": "(12.5 - 15.66) * 4 * 75"
+                    },
+                    "pnl": -948.75
+                },
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23400,
+                        "2025-03-27",
+                        "SHORT"
+                    ],
+                    "lots": 2,
+                    "daily_action": null,
+                    "debug_info": {
+                        "entry_price": 20.35,
+                        "closing_price": 19.9,
+                        "market_lot": 75,
+                        "pnl_calculation": "(20.35 - 19.9) * 2 * 75"
+                    },
+                    "pnl": 67.5
+                }
+            ],
+            "realised": [],
+            "total_unrealised_pnl": -881.25,
+            "total_realized_pnl": 0,
+            "cumulative_total_realized_pnl": 0.0
+        },
+        {
+            "date": "19-Mar-2025",
+            "unrealised": [
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23500,
+                        "2025-03-27",
+                        "LONG"
+                    ],
+                    "lots": 4,
+                    "daily_action": null,
+                    "debug_info": {
+                        "entry_price": 15.66,
+                        "closing_price": 16.8,
+                        "market_lot": 75,
+                        "pnl_calculation": "(16.8 - 15.66) * 4 * 75"
+                    },
+                    "pnl": 341.25
+                },
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23400,
+                        "2025-03-27",
+                        "SHORT"
+                    ],
+                    "lots": 2,
+                    "daily_action": null,
+                    "debug_info": {
+                        "entry_price": 20.35,
+                        "closing_price": 26.65,
+                        "market_lot": 75,
+                        "pnl_calculation": "(20.35 - 26.65) * 2 * 75"
+                    },
+                    "pnl": -945.0
+                }
+            ],
+            "realised": [],
+            "total_unrealised_pnl": -603.75,
+            "total_realized_pnl": 0,
+            "cumulative_total_realized_pnl": 0.0
+        },
+        {
+            "date": "20-Mar-2025",
+            "unrealised": [
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23500,
+                        "2025-03-27",
+                        "LONG"
+                    ],
+                    "lots": 2,
+                    "daily_action": "REDUCED_LONG",
+                    "debug_info": {
+                        "entry_price": 15.66,
+                        "closing_price": 32.2,
+                        "market_lot": 75,
+                        "pnl_calculation": "(32.2 - 15.66) * 2 * 75"
+                    },
+                    "pnl": 2480.63
+                },
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23400,
+                        "2025-03-27",
+                        "SHORT"
+                    ],
+                    "lots": 2,
+                    "daily_action": "NO_CHANGE",
+                    "debug_info": {
+                        "entry_price": 20.35,
+                        "closing_price": 54.35,
+                        "market_lot": 75,
+                        "pnl_calculation": "(20.35 - 54.35) * 2 * 75"
+                    },
+                    "pnl": -5100.0
+                }
+            ],
+            "realised": [
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23500,
+                        "2025-03-27"
+                    ],
+                    "lots": 2,
+                    "pnl": 2480.63
+                }
+            ],
+            "total_unrealised_pnl": -2619.37,
+            "total_realized_pnl": 2480.63,
+            "cumulative_total_realized_pnl": 2480.63
+        },
+        {
+            "date": "21-Mar-2025",
+            "unrealised": [
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23500,
+                        "2025-03-27",
+                        "LONG"
+                    ],
+                    "lots": 2,
+                    "daily_action": null,
+                    "debug_info": {
+                        "entry_price": 15.66,
+                        "closing_price": 71.9,
+                        "market_lot": 75,
+                        "pnl_calculation": "(71.9 - 15.66) * 2 * 75"
+                    },
+                    "pnl": 8435.63
+                },
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23400,
+                        "2025-03-27",
+                        "SHORT"
+                    ],
+                    "lots": 2,
+                    "daily_action": null,
+                    "debug_info": {
+                        "entry_price": 20.35,
+                        "closing_price": 115.4,
+                        "market_lot": 75,
+                        "pnl_calculation": "(20.35 - 115.4) * 2 * 75"
+                    },
+                    "pnl": -14257.5
+                }
+            ],
+            "realised": [],
+            "total_unrealised_pnl": -5821.88,
+            "total_realized_pnl": 0,
+            "cumulative_total_realized_pnl": 2480.63
+        },
+        {
+            "date": "24-Mar-2025",
+            "unrealised": [
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23500,
+                        "2025-03-27",
+                        "LONG"
+                    ],
+                    "lots": 2,
+                    "daily_action": null,
+                    "debug_info": {
+                        "entry_price": 15.66,
+                        "closing_price": 256.4,
+                        "market_lot": 75,
+                        "pnl_calculation": "(256.4 - 15.66) * 2 * 75"
+                    },
+                    "pnl": 36110.62
+                },
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23400,
+                        "2025-03-27",
+                        "SHORT"
+                    ],
+                    "lots": 2,
+                    "daily_action": null,
+                    "debug_info": {
+                        "entry_price": 20.35,
+                        "closing_price": 335.1,
+                        "market_lot": 75,
+                        "pnl_calculation": "(20.35 - 335.1) * 2 * 75"
+                    },
+                    "pnl": -47212.5
+                }
+            ],
+            "realised": [],
+            "total_unrealised_pnl": -11101.88,
+            "total_realized_pnl": 0,
+            "cumulative_total_realized_pnl": 2480.63
+        },
+        {
+            "date": "25-Mar-2025",
+            "unrealised": [
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23500,
+                        "2025-03-27",
+                        "LONG"
+                    ],
+                    "lots": 2,
+                    "daily_action": null,
+                    "debug_info": {
+                        "entry_price": 15.66,
+                        "closing_price": 248.6,
+                        "market_lot": 75,
+                        "pnl_calculation": "(248.6 - 15.66) * 2 * 75"
+                    },
+                    "pnl": 34940.62
+                },
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23400,
+                        "2025-03-27",
+                        "SHORT"
+                    ],
+                    "lots": 2,
+                    "daily_action": null,
+                    "debug_info": {
+                        "entry_price": 20.35,
+                        "closing_price": 327.7,
+                        "market_lot": 75,
+                        "pnl_calculation": "(20.35 - 327.7) * 2 * 75"
+                    },
+                    "pnl": -46102.5
+                }
+            ],
+            "realised": [],
+            "total_unrealised_pnl": -11161.87,
+            "total_realized_pnl": 0,
+            "cumulative_total_realized_pnl": 2480.63
+        },
+        {
+            "date": "26-Mar-2025",
+            "unrealised": [
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23500,
+                        "2025-03-27",
+                        "LONG"
+                    ],
+                    "lots": 2,
+                    "daily_action": null,
+                    "debug_info": {
+                        "entry_price": 15.66,
+                        "closing_price": 89.65,
+                        "market_lot": 75,
+                        "pnl_calculation": "(89.65 - 15.66) * 2 * 75"
+                    },
+                    "pnl": 11098.13
+                },
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23400,
+                        "2025-03-27",
+                        "SHORT"
+                    ],
+                    "lots": 2,
+                    "daily_action": null,
+                    "debug_info": {
+                        "entry_price": 20.35,
+                        "closing_price": 156.45,
+                        "market_lot": 75,
+                        "pnl_calculation": "(20.35 - 156.45) * 2 * 75"
+                    },
+                    "pnl": -20415.0
+                }
+            ],
+            "realised": [],
+            "total_unrealised_pnl": -9316.87,
+            "total_realized_pnl": 0,
+            "cumulative_total_realized_pnl": 2480.63
+        },
+        {
+            "date": "27-Mar-2025",
+            "unrealised": [
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23500,
+                        "2025-03-27",
+                        "FLAT"
+                    ],
+                    "lots": 0,
+                    "daily_action": "CLOSED_LONG",
+                    "debug_info": {
+                        "entry_price": 0.0,
+                        "closing_price": null,
+                        "market_lot": 75,
+                        "pnl_calculation": "N/A"
+                    },
+                    "pnl": 0.0
+                },
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23400,
+                        "2025-03-27",
+                        "FLAT"
+                    ],
+                    "lots": 0,
+                    "daily_action": "CLOSED_SHORT",
+                    "debug_info": {
+                        "entry_price": 0.0,
+                        "closing_price": null,
+                        "market_lot": 75,
+                        "pnl_calculation": "N/A"
+                    },
+                    "pnl": 0.0
+                }
+            ],
+            "realised": [
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23500,
+                        "2025-03-27"
+                    ],
+                    "lots": 2,
+                    "pnl": 11953.12
+                },
+                {
+                    "contract": [
+                        "NIFTY",
+                        "CE",
+                        23400,
+                        "2025-03-27"
+                    ],
+                    "lots": 2,
+                    "pnl": -26302.5
+                }
+            ],
+            "total_unrealised_pnl": 0,
+            "total_realized_pnl": -14349.38,
+            "cumulative_total_realized_pnl": -11868.75
+        }
+    ]
+}

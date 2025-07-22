@@ -1,0 +1,5 @@
+
+## Fyres
+
+
+- NIFTY : NSE:NIFTY50-INDEX

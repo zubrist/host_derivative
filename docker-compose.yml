@@ -1,0 +1,71 @@
+services:
+  gateway:
+    image: derivatives/k-api-gateway:latest
+    command: sh -c "uvicorn main:app --reload --host 0.0.0.0"
+
+    build:
+      context: ./gateway
+      dockerfile: Dockerfile
+
+    env_file:
+      - ./gateway/.env  # Fixed extra space in path
+
+    environment:
+      TZ: Asia/Kolkata
+
+    ports:
+      - "8000:8000"
+
+    depends_on:
+      - nse
+      - breakeven
+
+    volumes:
+      - ./gateway:/app
+
+
+  nse:
+    image: derivatives/k-nse:latest
+    command: sh -c "uvicorn main:app --reload --host 0.0.0.0"
+
+    build:
+      context: ./nse
+      dockerfile: Dockerfile
+
+    env_file:
+      - ./nse/.env  # Fixed extra space in path
+
+    environment:
+      TZ: Asia/Kolkata
+
+    volumes:
+      - ./nse:/app
+
+  breakeven: # Added breakeven service
+    image: derivatives/k-breakeven:latest
+    command: sh -c "uvicorn main:app --reload --host 0.0.0.0" # Assuming port 8001
+    build:
+      context: ./breakeven
+      dockerfile: Dockerfile
+    env_file:
+      - ./breakeven/.env # Ensure breakeven has its own .env file
+    environment:
+      TZ: Asia/Kolkata
+    volumes:
+      - ./breakeven:/app
+    # ports:
+    #   - "8001:8001" # Expose port 8001
+
+  frontend:
+    image: streamlit-frontend:latest
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "8501:8501"
+    # env_file:
+    #   - ./frontend/.env  
+    environment:
+      BACKEND_URL: "http://gateway:8000"
+    volumes:
+    - ./frontend:/app    

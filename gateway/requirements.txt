@@ -1,0 +1,14 @@
+fastapi==0.63.0
+uvicorn==0.15.0
+python-multipart==0.0.5
+requests==2.31.0
+PyJWT==1.7.1
+aiohttp==3.9.3
+aiodns==2.0.0
+requests==2.31.0
+flake8==3.9.2
+ipdb==0.13.9
+ipython==7.17.0
+
+fyers-apiv3
+pydantic[email]

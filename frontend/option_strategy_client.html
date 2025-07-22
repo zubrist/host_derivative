@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Option Strategy Performance</title>
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      max-width: 1200px; 
+      margin: 30px auto; 
+      background-color: #f4f6f8; /* Light, professional solid background */
+      font-size: 0.95em; 
+    } /* Reduced base font size */
+    h2 { color: #000066; font-size: 1.6em; } /* Reduced h2 font size */
+    form { margin-bottom: 20px; }
+    label { margin-right: 12px; font-size: 0.9em; }
+    input[type="text"] { padding: 3px; width: 200px; font-size: 0.9em; }
+    button { padding: 5px 15px; background: #000066; color: white; border: none; border-radius: 3px; font-size: 0.9em; }
+    table { border-collapse: collapse; width: 100%; background: white; margin-top: 15px; }
+    th, td { border: 1px solid #ddd; padding: 6px 4px; text-align: center; font-size: 0.9em; }
+    th { background: #000066; color: white; }
+    tr:nth-child(even) { background: #f2f2f2; }
+    .pos { color: green; }
+    .neg { color: red; }
+    #loading { color: #000066; font-weight: bold; margin-top: 15px; font-size: 0.9em; }
+    #error { color: red; font-weight: bold; margin-top: 15px; font-size: 0.9em; }
+    .day-card { background: #fff; border-radius: 6px; box-shadow: 0 1px 6px #0001; margin-bottom: 20px; padding: 15px 18px 10px 18px; transition: box-shadow 0.2s; }
+    .day-card:hover { box-shadow: 0 2px 12px #0002; }
+    .date-row { font-size: 1.1em; margin-bottom: 8px; color: #000066; }
+    .contracts-row { display: flex; gap: 28px; margin-bottom: 8px; }
+    .contracts-block { flex: 1; }
+    .contracts-title { font-weight: bold; margin-bottom: 5px; color: #333; font-size: 0.95em; }
+    .contract-badge { margin-bottom: 8px; } /* Increased margin for action text */
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.9em; margin-right: 5px; margin-bottom: 2px; }
+    .badge-blue { background: #e3f0ff; color: #0057b8; border: 1px solid #b3d1f7; }
+    .badge-orange { background: #fff3e0; color: #e67e22; border: 1px solid #f7cfa0; }
+    .badge-grey { background: #eee; color: #888; border: 1px solid #ccc; }
+    .badge-lots { background: #f0f7fa; color: #00796b; border: 1px solid #b2dfdb; }
+    .badge-pnl { font-weight: bold; }
+    .badge-detail { background: #f0f0f0; color: #555; border: 1px solid #ddd; font-size: 0.8em; padding: 2px 5px; margin-right: 3px; margin-bottom: 2px; display: inline-block; }
+    .contract-details { display: block; margin-top: 3px; line-height: 1.4; }
+    .daily-action-text { font-size: 0.8em; color: #555; margin-bottom: 1px; display: block; } /* Style for daily action text */
+    .summary-row { margin-top: 8px; }
+    .summary-badge { display: inline-block; background: #f7f7fa; border-radius: 6px; padding: 5px 15px; margin-right: 15px; font-size: 1em; border: 1px solid #e0e0e0; }
+    .filter-section { margin-bottom: 15px; }
+    .filter-section select { padding: 5px; margin-right: 8px; font-size: 0.9em; }
+    /* .export-buttons { margin-top: 20px; } REMOVED */
+    /* .export-buttons button { margin-right: 10px; } REMOVED */
+  </style>
+</head>
+<body>
+  <h2>Option Strategy Performance</h2>
+  <div class="filter-section">
+    <select id="filterType">
+      <option value="all">Show All</option>
+      <option value="unrealized">Unrealized Only</option>
+      <option value="realized">Realized Only</option>
+    </select>
+    <input type="text" id="searchContract" placeholder="Search contract..." style="width: 180px; padding: 5px; font-size: 0.9em;">
+  </div>
+  <form id="fetchForm">
+    <label>User ID: <input id="userId" type="text" value="1"></label>
+    <label>Token: <input id="token" type="text" style="width:300px"></label>
+    <button type="submit">Fetch</button>
+  </form>
+  <!-- <div class="export-buttons">
+    <button onclick="exportToExcel()">Export to Excel</button>
+    <button onclick="exportToCSV()">Download CSV</button>
+  </div> -->
+  <div id="loading"></div>
+  <div id="error"></div>
+  <div id="result" style="margin-top:32px;"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+  <script>
+    document.getElementById('fetchForm').onsubmit = async function(e) {
+      e.preventDefault();
+      document.getElementById('loading').innerText = "Loading...";
+      document.getElementById('error').innerText = "";
+      document.getElementById('result').innerHTML = "";
+      const userId = document.getElementById('userId').value;
+      const token = document.getElementById('token').value;
+      try {
+        const res = await fetch("http://localhost:8000/api/v1_0/strategy/simulation", {
+          headers: {
+            "request_user_id": userId,
+            "Authorization": "Bearer " + token,
+            "accept": "application/json",
+            "Content-Type": "application/json"
+          }
+        });
+        const json = await res.json();
+        document.getElementById('loading').innerText = "";
+        if (!json.data) {
+          document.getElementById('error').innerText = "No data or invalid response.";
+          return;
+        }
+        const data = json.data;
+        renderData(data);
+      } catch (err) {
+        document.getElementById('loading').innerText = "";
+        document.getElementById('error').innerText = "Error fetching data: " + err;
+      }
+    };
+
+    function renderData(data) {
+      const filter = document.getElementById('filterType').value;
+      const search = document.getElementById('searchContract').value.toLowerCase();
+      const resultDiv = document.getElementById('result');
+      resultDiv.innerHTML = "";
+      
+      data.forEach(row => {
+        const unrealised = filter === "realized" ? [] : row.unrealised.filter(u => 
+          u.contract.some(c => c.toLowerCase().includes(search))
+        );
+        const realised = filter === "unrealized" ? [] : row.realised.filter(r => 
+          r.contract.some(c => c.toLowerCase().includes(search))
+        );
+        
+        if (unrealised.length === 0 && realised.length === 0) return;
+
+        const dayCard = document.createElement('div');
+        dayCard.className = 'day-card';
+        dayCard.innerHTML = `
+          <div class="date-row"><b>${row.date}</b></div>
+          <div class="contracts-row">
+            <div class="contracts-block">
+              <div class="contracts-title">Unrealized Positions</div>
+              ${unrealised.length === 0 ? '<span class="badge badge-grey">None</span>' : unrealised.map(u => `
+                <div class="contract-badge">
+                  ${u.daily_action ? `<span class="daily-action-text">${getFriendlyActionText(u.daily_action)}</span>` : ''}
+                  <div> <!-- Main line -->
+                    <span class="badge badge-blue">${u.contract.join(" | ")}</span>
+                    <span class="badge badge-lots">Lots: ${u.lots}</span>
+                    <span class="badge badge-pnl ${u.pnl >= 0 ? 'pos' : 'neg'}">PnL: ${u.pnl !== null && u.pnl !== undefined ? u.pnl.toFixed(2) : 'N/A'}</span>
+                  </div>
+                  <div class="contract-details"> <!-- Details line -->
+                    <span class="badge badge-detail">Mkt Lot: ${u.debug_info && u.debug_info.market_lot !== undefined ? u.debug_info.market_lot : 'N/A'}</span>
+                    <span class="badge badge-detail">Avg EP: ${u.debug_info && u.debug_info.entry_price !== null && u.debug_info.entry_price !== undefined ? u.debug_info.entry_price.toFixed(2) : 'N/A'}</span>
+                    <span class="badge badge-detail">CP: ${u.debug_info && u.debug_info.closing_price !== null && u.debug_info.closing_price !== undefined ? u.debug_info.closing_price.toFixed(2) : 'N/A'}</span>
+                    <button onclick="toggleDebug(this)" style="margin-left: 3px; padding: 1px 4px; font-size: 0.75em; vertical-align: middle;">Debug</button>
+                  </div>
+                  <div class="debug-info" style="display: none; margin-top: 3px; padding: 5px; border: 1px dashed #ccc; background: #f9f9f9;">
+                    <pre style="margin:0; font-size: 0.9em;">${JSON.stringify(u.debug_info, null, 2)}</pre>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+            <div class="contracts-block">
+              <div class="contracts-title">Realized Positions</div>
+              ${realised.length === 0 ? '<span class="badge badge-grey">None</span>' : realised.map(r => `
+                <div class="contract-badge">
+                  <div> <!-- Main line -->
+                    <span class="badge badge-orange">${r.contract.join(" | ")}</span>
+                    <span class="badge badge-lots">Lots: ${r.lots}</span>
+                    <span class="badge badge-pnl ${r.pnl >= 0 ? 'pos' : 'neg'}">PnL: ${r.pnl !== null && r.pnl !== undefined ? r.pnl.toFixed(2) : 'N/A'}</span>
+                  </div>
+                  <div class="contract-details"> <!-- Details line -->
+                    <span class="badge badge-detail">Mkt Lot: ${r.debug_info && r.debug_info.market_lot !== undefined ? r.debug_info.market_lot : 'N/A'}</span>
+                    <span class="badge badge-detail">EP Closed: ${r.debug_info && r.debug_info.entry_price_closed !== null && r.debug_info.entry_price_closed !== undefined ? r.debug_info.entry_price_closed.toFixed(2) : 'N/A'}</span>
+                    <span class="badge badge-detail">Exit P: ${r.debug_info && r.debug_info.exit_price !== null && r.debug_info.exit_price !== undefined ? r.debug_info.exit_price.toFixed(2) : 'N/A'}</span>
+                    <button onclick="toggleDebug(this)" style="margin-left: 3px; padding: 1px 4px; font-size: 0.75em; vertical-align: middle;">Debug</button>
+                  </div>
+                  <div class="debug-info" style="display: none; margin-top: 3px; padding: 5px; border: 1px dashed #ccc; background: #f9f9f9;">
+                    <pre style="margin:0; font-size: 0.9em;">${JSON.stringify(r.debug_info, null, 2)}</pre>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+          <div class="summary-row">
+            <span class="summary-badge">Daily Unrealized PnL: <b class="${row.total_unrealised_pnl >= 0 ? 'pos' : 'neg'}">${row.total_unrealised_pnl !== null && row.total_unrealised_pnl !== undefined ? row.total_unrealised_pnl.toFixed(2) : 'N/A'}</b></span>
+            <span class="summary-badge">Daily Realized PnL: <b class="${row.total_realized_pnl >= 0 ? 'pos' : 'neg'}">${row.total_realized_pnl !== null && row.total_realized_pnl !== undefined ? row.total_realized_pnl.toFixed(2) : 'N/A'}</b></span>
+            <span class="summary-badge">Cumulative Realized PnL: <b class="${row.cumulative_total_realized_pnl >= 0 ? 'pos' : 'neg'}">${row.cumulative_total_realized_pnl !== null && row.cumulative_total_realized_pnl !== undefined ? row.cumulative_total_realized_pnl.toFixed(2) : 'N/A'}</b></span>
+          </div>
+        `;
+        resultDiv.appendChild(dayCard);
+      });
+    }
+
+    function toggleDebug(button) {
+      // Find the parent .contract-badge, then find the .debug-info within that parent
+      const parentContractBadge = button.closest('.contract-badge');
+      if (parentContractBadge) {
+        const info = parentContractBadge.querySelector('.debug-info');
+        if (info) {
+          info.style.display = info.style.display === 'none' ? 'block' : 'none';
+        }
+      }
+    }
+
+    function getFriendlyActionText(action) {
+      if (!action) return '';
+      switch(action.toUpperCase()) {
+        case 'NEW_LONG': return 'New Long Position';
+        case 'NEW_SHORT': return 'New Short Position';
+        case 'ADDED_TO_LONG': return 'Added to Long';
+        case 'ADDED_TO_SHORT': return 'Added to Short';
+        case 'REDUCED_LONG': return 'Reduced Long';
+        case 'REDUCED_SHORT': return 'Reduced Short';
+        case 'CLOSED_LONG': return 'Closed Long';
+        case 'CLOSED_SHORT': return 'Closed Short';
+        case 'FLIPPED_TO_LONG': return 'Flipped to Long';
+        case 'FLIPPED_TO_SHORT': return 'Flipped to Short';
+        case 'EXPIRED': return 'Expired';
+        case 'MODIFIED_NO_NET_LOT_CHANGE': return 'Modified (No Net Change)';
+        default: return action; // Return original if no friendly version
+      }
+    }
+
+    // function exportToExcel() { // REMOVED
+    //   const data = Array.from(document.querySelectorAll('.day-card')).map(card => {
+    //     const date = card.querySelector('.date-row').innerText;
+    //     const unrealised = Array.from(card.querySelectorAll('.contracts-block:first-child .contract-badge')).map(b => {
+    //       const contract = b.querySelector('.badge-blue').innerText;
+    //       const lots = b.querySelector('.badge-lots').innerText;
+    //       const pnl = b.querySelector('.badge-pnl').innerText;
+    //       return { date, type: 'Unrealized', contract, lots, pnl };
+    //     });
+    //     const realised = Array.from(card.querySelectorAll('.contracts-block:last-child .contract-badge')).map(b => {
+    //       const contract = b.querySelector('.badge-orange').innerText;
+    //       const lots = b.querySelector('.badge-lots').innerText;
+    //       const pnl = b.querySelector('.badge-pnl').innerText;
+    //       return { date, type: 'Realized', contract, lots, pnl };
+    //     });
+    //     return [...unrealised, ...realised];
+    //   }).flat();
+      
+    //   const ws = XLSX.utils.json_to_sheet(data);
+    //   const wb = XLSX.utils.book_new();
+    //   XLSX.utils.book_append_sheet(wb, ws, "Performance");
+    //   XLSX.writeFile(wb, "option_performance.xlsx");
+    // }
+
+    // function exportToCSV() { // REMOVED
+    //   const data = Array.from(document.querySelectorAll('.day-card')).map(card => {
+    //     const date = card.querySelector('.date-row').innerText;
+    //     const unrealised = Array.from(card.querySelectorAll('.contracts-block:first-child .contract-badge')).map(b => {
+    //       const contract = b.querySelector('.badge-blue').innerText;
+    //       const lots = b.querySelector('.badge-lots').innerText;
+    //       const pnl = b.querySelector('.badge-pnl').innerText;
+    //       return `Unrealized,${date},${contract},${lots},${pnl}`;
+    //     });
+    //     const realised = Array.from(card.querySelectorAll('.contracts-block:last-child .contract-badge')).map(b => {
+    //       const contract = b.querySelector('.badge-orange').innerText;
+    //       const lots = b.querySelector('.badge-lots').innerText;
+    //       const pnl = b.querySelector('.badge-pnl').innerText;
+    //       return `Realized,${date},${contract},${lots},${pnl}`;
+    //     });
+    //     return [...unrealised, ...realised];
+    //   }).flat();
+      
+    //   const csvContent = "Type,Date,Contract,Lots,PnL\n" + data.join("\n");
+    //   const blob = new Blob([csvContent], { type: 'text/csv' });
+    //   const url = URL.createObjectURL(blob);
+    //   const a = document.createElement("a");
+    //   a.href = url;
+    //   a.download = "option_performance.csv";
+    //   a.click();
+    //   URL.revokeObjectURL(url);
+    // }
+
+    document.getElementById('filterType').addEventListener('change', () => {
+      if (document.getElementById('result').innerHTML) {
+        document.getElementById('fetchForm').dispatchEvent(new Event('submit'));
+      }
+    });
+
+    document.getElementById('searchContract').addEventListener('input', () => {
+      if (document.getElementById('result').innerHTML) {
+        document.getElementById('fetchForm').dispatchEvent(new Event('submit'));
+      }
+    });
+  </script>
+</body>
+</html>
