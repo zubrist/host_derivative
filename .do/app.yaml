@@ -1,0 +1,33 @@
+name: derivatives-app
+services:
+  - name: gateway
+    github:
+      repo: zubrist/hostDerivative
+      branch: main
+    dockerfile_path: gateway/Dockerfile
+    source_dir: gateway
+    http_port: 8000
+
+  - name: nse
+    github:
+      repo: zubrist/hostDerivative
+      branch: main
+    dockerfile_path: nse/Dockerfile
+    source_dir: nse
+    http_port: 8000
+
+  - name: breakeven
+    github:
+      repo: zubrist/hostDerivative
+      branch: main
+    dockerfile_path: breakeven/Dockerfile
+    source_dir: breakeven
+    http_port: 8000
+
+  - name: frontend
+    github:
+      repo: zubrist/hostDerivative
+      branch: main
+    dockerfile_path: frontend/Dockerfile
+    source_dir: frontend
+    http_port: 8501
